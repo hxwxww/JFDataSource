@@ -1,6 +1,11 @@
 # JFDataSource
 A simple way to create dataSource and delegate for UITableView and UICollectionView
 
+## Import
+```
+pod 'JFDataSource'
+```
+
 ## Usage
 
 - UITableView:
