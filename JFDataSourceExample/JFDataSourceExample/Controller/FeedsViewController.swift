@@ -28,8 +28,8 @@ class FeedsViewController: UIViewController {
         dataSource.sections = [section1, section2, section3]
     }
     
-    private func buildSection(feeds: [Feed], name: String) -> TableViewScection<Feed> {
-        let section = TableViewScection(items: feeds) { (tableView, indexPath, feed) -> UITableViewCell in
+    private func buildSection(feeds: [Feed], name: String) -> TableViewSection<Feed> {
+        let section = TableViewSection(items: feeds) { (tableView, indexPath, feed) -> UITableViewCell in
             let cell = tableView.dequeueReusableCell(withIdentifier: "FeedCell", for: indexPath) as! FeedCell
             cell.configureCell(feed: feed)
             return cell

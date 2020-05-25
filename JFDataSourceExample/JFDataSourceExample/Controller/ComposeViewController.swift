@@ -44,7 +44,7 @@ class ComposeViewController: UIViewController {
         tableView.dataSource = dataSource
         tableView.delegate = dataSource
         
-        let section1 = TableViewScection(items: [ads]) { (tableView, indexPath, ads) -> UITableViewCell in
+        let section1 = TableViewSection(items: [ads]) { (tableView, indexPath, ads) -> UITableViewCell in
             let cell = tableView.dequeueReusableCell(withIdentifier: "AdsCell", for: indexPath) as! AdsCell
             cell.configureCell(ads: ads)
             return cell
@@ -53,7 +53,7 @@ class ComposeViewController: UIViewController {
             return UIScreen.main.bounds.width * 0.5
         }
         
-        let section2 = TableViewScection(items: [categories]) { (tableView, indexPath, categories) -> UITableViewCell in
+        let section2 = TableViewSection(items: [categories]) { (tableView, indexPath, categories) -> UITableViewCell in
             let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell", for: indexPath) as! CategoryCell
             cell.configureCell(categories: categories)
             return cell
@@ -62,7 +62,7 @@ class ComposeViewController: UIViewController {
             return floor(UIScreen.main.bounds.width - 75) / 4 + 30
         }
         
-        let section3 = TableViewScection(items: activities) { (tableView, indexPath, activity) -> UITableViewCell in
+        let section3 = TableViewSection(items: activities) { (tableView, indexPath, activity) -> UITableViewCell in
             let cell = tableView.dequeueReusableCell(withIdentifier: "ActivityCell", for: indexPath) as! ActivityCell
             cell.configureCell(activity: activity)
             return cell
@@ -71,7 +71,7 @@ class ComposeViewController: UIViewController {
             return UIScreen.main.bounds.width * 0.35
         }
         
-        let section4 = TableViewScection(items: hotGoods) { (tableView, indexPath, goods) -> UITableViewCell in
+        let section4 = TableViewSection(items: hotGoods) { (tableView, indexPath, goods) -> UITableViewCell in
             let cell = tableView.dequeueReusableCell(withIdentifier: "GoodsCell", for: indexPath) as! GoodsCell
             cell.configureCell(goods: goods)
             return cell

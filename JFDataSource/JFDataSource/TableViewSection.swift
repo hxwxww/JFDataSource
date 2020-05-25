@@ -10,7 +10,7 @@ import UIKit
 
 public protocol TableViewSectionType: UITableViewDataSource, UITableViewDelegate { }
 
-open class TableViewScection<Item>: NSObject, TableViewSectionType, ItemsEditable {
+open class TableViewSection<Item>: NSObject, TableViewSectionType, ItemsEditable {
     
     public typealias CellProvider = (UITableView, IndexPath, Item) -> UITableViewCell
     public typealias CellHeightProvider = (UITableView, IndexPath, Item) -> CGFloat
